@@ -1,9 +1,11 @@
 import { HeroCard } from './HeroCard';
 import { getHeoresByPubliser } from '../helpers'
+import { useMemo } from 'react';
 
 export const HeroList = ( { publisher } ) => {
 
-    const heroes = getHeoresByPubliser( publisher );
+    // solo cuando el publisher cambie volvemos a disparar la funcion
+    const heroes = useMemo( () => getHeoresByPubliser( publisher ), [ publisher ]);
 
   return (
     <>
