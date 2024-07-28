@@ -12,20 +12,20 @@ export const AppRouter = () => {
           <Routes>
 
                                             {/* Opcion 1: por modulos */}
-              {/* <Route path="login" element={ 
+              <Route path="login" element={ 
                 <PublicRoute>
                    <LoginPage />
                 </PublicRoute>
-               } /> */}
+               } />
 
                                             {/* Opcion 2: por rutas --> te permite agregar mas rutas publicas facilemte*/}
-          <Route path="login/*" element={ 
+          {/* <Route path="login/*" element={ 
                 <PublicRoute>
                    <Routes>
                       <Route path="/*" element={ <LoginPage /> } />
                    </Routes>
                 </PublicRoute>
-               } />
+               } /> */}
               
               {/* Con <PrivateRoute> protegemos las rutas privadas */}
               <Route path="/*" element={
