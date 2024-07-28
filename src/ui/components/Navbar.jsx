@@ -1,16 +1,17 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 
 export const Navbar = () => {
+    const { user, logout } = useContext( AuthContext );
 
     const navigate = useNavigate(); // custom hook del router
 
     const onLogout = () => {
-                    // a donde queres ir
-        navigate( '/login', {
-            replace: true, // evita que puedas volver al sitio anterior con la flecha
-        } );
-    }
+        logout();
+        navigate( '/login', { replace: true, } ); // evita que puedas volver al sitio anterior con la flecha
+    };
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
@@ -64,7 +65,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
                     
                     <span className='nav-item nav-link text-primary'>
-                        Luci
+                        { user?.name }
                     </span>
 
                     <button

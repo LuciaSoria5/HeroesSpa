@@ -43,7 +43,7 @@ export const HeroPage = () => {
           className="btn btn-outline-primary"
           onClick={ onNavigateBack }
         >
-            Regresar
+            Go back
         </button>
       </div>
 
