@@ -5,7 +5,7 @@
 
 Esta es una aplicación desarrollada en React 18.3.1 que permite a los usuarios buscar y visualizar distintos héroes de Marvel y DC Comics.
 
-La aplicación fue desplegada utilizando GitHub-Pages, y se encuentra disponible en [este link](https://luciasoria5.github.io/Heroes/).
+La aplicación fue desplegada utilizando GitHub-Pages, y se encuentra disponible en [este link](https://luciasoria5.github.io/HeroesSpa/).
 
 ## Características
 
